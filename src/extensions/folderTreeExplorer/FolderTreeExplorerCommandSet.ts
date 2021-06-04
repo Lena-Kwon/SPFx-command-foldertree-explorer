@@ -75,7 +75,6 @@ const LOG_SOURCE: string = 'FolderTreeExplorerCommandSet';
         console.log('테스트 folderUrl: ' + folderUrl);
         console.log('테스트1: ' + queryParameters.get("RootFolder"));
         console.log('테스트1: ' + queryParameters.get("Id"));
-
         this._renderDialogContainer(folderUrl, true);
         break;
       default:
