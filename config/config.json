@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "folder-tree-explorer-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/folderTreeExplorer/FolderTreeExplorerCommandSet.js",
+          "manifest": "./src/extensions/folderTreeExplorer/FolderTreeExplorerCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FolderTreeExplorerCommandSetStrings": "lib/extensions/folderTreeExplorer/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

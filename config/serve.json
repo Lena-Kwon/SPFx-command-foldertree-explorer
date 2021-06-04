@@ -1,0 +1,31 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      "customActions": {
+        "9caae6c2-b1fb-46f0-a925-5e0850e9b01e": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+    "folderTreeExplorer": {
+      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      "customActions": {
+        "9caae6c2-b1fb-46f0-a925-5e0850e9b01e": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    }
+  }
+}

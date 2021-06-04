@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "9caae6c2-b1fb-46f0-a925-5e0850e9b01e",
+  "alias": "FolderTreeExplorerCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+
+  "items": {
+    "Explorer": {
+      "title": { "default": "Explorer", "ko-kr": "탐색", "en-us": "Explorer" },
+      "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8klEQVQ4T2P8////fwYKAOPAG7C45+D/a2efoHhCQlaAwS/JlEFeTZSBkRG//xgXdO7/H5xuwcDDzwFXefHoA4Y1M08w/P3zD69uLWMZBsa+4s3/Xz/7hOGC4AwLBikFIZwu+PLxB8PamScYsLqAmEgZBgaAkt+LR+9JC4OPb78xrJ9zkuHu1ZcMytriDIEp5sQb8Of3X4Z1s08yqOpKMuhZyTNcOvaQ4fbl58QbAAt1WJohORZALlgz4wSDuoEUeS54cvctOOEwMTMxvHr6EREG2FIiLCFJygsyxBTZMXz99INh/ZxTDIEpZgwyysIo6QwApQShxtUk63AAAAAASUVORK5CYII=",
+      "type": "command"
+    },
+    "COMMAND_2": {
+      "title": { "default": "Command Two" },
+      "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8klEQVQ4T2P8////fwYKAOPAG7C45+D/a2efoHhCQlaAwS/JlEFeTZSBkRG//xgXdO7/H5xuwcDDzwFXefHoA4Y1M08w/P3zD69uLWMZBsa+4s3/Xz/7hOGC4AwLBikFIZwu+PLxB8PamScYsLqAmEgZBgaAkt+LR+9JC4OPb78xrJ9zkuHu1ZcMytriDIEp5sQb8Of3X4Z1s08yqOpKMuhZyTNcOvaQ4fbl58QbAAt1WJohORZALlgz4wSDuoEUeS54cvctOOEwMTMxvHr6EREG2FIiLCFJygsyxBTZMXz99INh/ZxTDIEpZgwyysIo6QwApQShxtUk63AAAAAASUVORK5CYII=",
+      "type": "command"
+    }
+  }
+}
