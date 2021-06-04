@@ -67,6 +67,7 @@ const LOG_SOURCE: string = 'FolderTreeExplorerCommandSet';
         }
         else {
           folderUrl = this.context.pageContext.list.serverRelativeUrl;
+          
         }
         
         console.log('테스트 queryParameters: ' + queryParameters);

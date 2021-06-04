@@ -17,7 +17,7 @@ export class ServiceProvider implements IServiceProvider {
             
             const lists: IListInfo[] = await sp.web.lists.filter(`BaseTemplate eq 101`).expand('RootFolder').orderBy('Created').get();
             //const librarys: IListInfo[] = await this.GetRoot(); //위랑 같은 코드
-
+            
             const rtn: ITreeItem[] = await Promise.all(lists.map(async (l) => {
                 return this.GetSubFolderUsingListInfo(l);
             }));
