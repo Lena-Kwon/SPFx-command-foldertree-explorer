@@ -4,6 +4,7 @@ declare interface IFolderTreeExplorerCommandSetStrings {
   ButtonMove: string;
   ButtonlCancel: string;
   ButtonClose: string;
+  Explorer: string;
 }
 
 declare module 'FolderTreeExplorerCommandSetStrings' {

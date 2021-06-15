@@ -2,7 +2,7 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <CustomAction
         Title="FolderTreeExplorer"
-        RegistrationId="100"
+        RegistrationId="101"
         RegistrationType="List"
         Location="ClientSideExtension.ListViewCommandSet.CommandBar"
         ClientSideComponentId="9caae6c2-b1fb-46f0-a925-5e0850e9b01e"

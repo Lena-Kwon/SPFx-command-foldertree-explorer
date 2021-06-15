@@ -57,25 +57,21 @@ const LOG_SOURCE: string = 'FolderTreeExplorerCommandSet';
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
     switch (event.itemId) {
       case 'Explorer':
-        //Dialog.alert(`${this.properties.sampleTextOne}`);
-        const queryParameters = new URLSearchParams(location.href);
+        //const queryParameters = new URLSearchParams(location.href);
+        const queryParameters = new URLSearchParams(location.search); //현재 url에서 파라미터만 가져오기
         const currentFolderPath = queryParameters.get("id") || queryParameters.get("Id") || queryParameters.get("RootFolder");
-        let folderUrl: string;
+        let folderUrl: string; //현재 위치
+        let listTitle: string; //현재 라이브러리명
 
-        if (queryParameters.has("Id") || queryParameters.has("id")) {
+        if (queryParameters.has("Id") || queryParameters.has("id") || queryParameters.has("RootFolder")) {
           folderUrl = decodeURIComponent(currentFolderPath);
         }
         else {
           folderUrl = this.context.pageContext.list.serverRelativeUrl;
-          
         }
+        listTitle = this.context.pageContext.list.title;
         
-        console.log('테스트 queryParameters: ' + queryParameters);
-        console.log('테스트 currentFolderPath: ' + currentFolderPath);
-        console.log('테스트 folderUrl: ' + folderUrl);
-        console.log('테스트1: ' + queryParameters.get("RootFolder"));
-        console.log('테스트1: ' + queryParameters.get("Id"));
-        this._renderDialogContainer(folderUrl, true);
+        this._renderDialogContainer(listTitle, folderUrl, true);
         break;
       default:
         throw new Error('Unknown command');
@@ -83,21 +79,23 @@ const LOG_SOURCE: string = 'FolderTreeExplorerCommandSet';
   }
 
   private _closeDialogContainer = () => {
-    this._renderDialogContainer('', false);
+    this._renderDialogContainer('', '', false);
+    ReactDom.unmountComponentAtNode(this.dialogContainer);
   }
 
-  private _renderDialogContainer(currentUrlLocation: string, isDialogDisplayed: boolean) {
+  private _renderDialogContainer(currentListTitle: string, currentUrlLocation: string, isDialogDisplayed: boolean) {
     const element: React.ReactElement<any> = React.createElement(
       FolderTreeDialog,
       {
         context: this.context,
         location: currentUrlLocation,
+        listTitle: currentListTitle,
         displayDialog: isDialogDisplayed,
         commandTitle: strings.TitleDialog,
         closeDialog: this._closeDialogContainer
       }
     );
-    console.log('테스트: renderDia실행됨'); //OK
+
     ReactDom.render(element, this.dialogContainer);
   }
 }

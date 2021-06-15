@@ -4,6 +4,7 @@ define([], function() {
     "LabelCurrentLocation": "Current Location: ",
     "ButtonMove": "Move",
     "ButtonClose": "Close",
-    "ButtonCancel": "Cancel"
+    "ButtonCancel": "Cancel",
+    "Explorer": "Explorer"
   }
 });

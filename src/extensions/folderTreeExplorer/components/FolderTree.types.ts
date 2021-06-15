@@ -7,4 +7,5 @@ export interface IFolderTreeProps {
 
 export interface IFolderTreeState {
   TreeLinks: ITreeItem[];
+  selectLocation: string;
 }

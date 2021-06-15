@@ -23,7 +23,8 @@ export default class TreeViewDemo extends React.Component<IFolderTreeProps, IFol
       spfxContext: this.props.context
     });
     this.state = {
-      TreeLinks: []
+      TreeLinks: [],
+      selectLocation: ''
     };
 
     this._getLinks();
@@ -32,7 +33,7 @@ export default class TreeViewDemo extends React.Component<IFolderTreeProps, IFol
   
   private async _getLinks() {
     const dataProvider: IServiceProvider = new ServiceProvider();
-    const treeArr: ITreeItem[] = await dataProvider.GetRootFolders();
+    const treeArr: ITreeItem[] = await dataProvider.GetRootFolders('');
 
     this.setState({TreeLinks: treeArr});
   }
