@@ -1,7 +1,7 @@
 
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import FolderTreeGenerator from './FolderTreeGenerator1';
+import FolderTreeGenerator from './FolderTreeGenerator';
 import { ListViewCommandSetContext } from '@microsoft/sp-listview-extensibility';
 
 export interface IFolderTreeDialogProps {

@@ -17,6 +17,12 @@
       min-height: 32px;
     }
 
+    .folderTree {
+      min-height: 200px;
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+
     .folderscontainer {
       min-height: 45px;
 
@@ -49,8 +55,8 @@
       }
 
       .blankarea {
-        height: 14px;
-        width: 14px;
+        height: 16px;
+        width: 16px;
       }
 
       .addloading {
@@ -65,5 +71,7 @@
         color: red;
       }
     }
+
   }
+  
 }

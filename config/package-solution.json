@@ -3,7 +3,7 @@
   "solution": {
     "name": "folder-tree-explorer-client-side-solution",
     "id": "70f7506c-0072-4fb5-b19a-3934a6b75044",
-    "version": "1.0.0.8",
+    "version": "1.0.0.12",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "developer": {

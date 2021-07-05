@@ -14,7 +14,6 @@ export class ServiceProvider implements IServiceProvider {
     public async GetRootFolders(currentList: string): Promise<ITreeItem[]> {
         return new Promise<ITreeItem[]>(async (resolve) => {
             let rtnArray: ITreeItem[] = [];
-            //console.log('테스트_currentList' + currentList);
             //const lists: IListInfo[] = await sp.web.lists.filter(`BaseTemplate eq 101`).expand('RootFolder').orderBy('Created').get();
             const lists: IListInfo = await sp.web.lists.getByTitle(currentList).expand('RootFolder').get();
             
@@ -65,9 +64,9 @@ export class ServiceProvider implements IServiceProvider {
                             label: l.Title,
                             data: l.RootFolder.ServerRelativeUrl,
                             selectable: true,
+                            iconProps: { iconName: 'FabricFolderFill', style: { color: '#EDD200',},},
                             children: []
                         };
-                        //console.log('트리추가됨(서브O): ' + tree.label );
                         resolve(this.GetSubFolders(tree));
                         //resolve(tree);
                     }
@@ -76,9 +75,9 @@ export class ServiceProvider implements IServiceProvider {
                         const tree: ITreeItem = {
                             key: l.RootFolder.ServerRelativeUrl,
                             label: l.Title,
-                            data: l.RootFolder.ServerRelativeUrl
+                            data: l.RootFolder.ServerRelativeUrl,
+                            iconProps: { iconName: 'FabricFolderFill', style: { color: '#EDD200',},}
                         };
-                        //console.log('트리추가됨(서브X): ' + tree.label );
                         resolve(tree);
                     }
                 });
@@ -97,9 +96,9 @@ export class ServiceProvider implements IServiceProvider {
                             label: f.Name,
                             data: f.ServerRelativeUrl,
                             selectable: true,
+                            iconProps: { iconName: 'FabricFolderFill', style: { color: '#EDD200',},},
                             children: []
                         };
-                        //console.log('부모트리에 child로 push함(하위O): ' + tree.label );
                         //resolve(tree);
                         resolve(this.GetSubFolders(tree));
                     }
@@ -108,9 +107,9 @@ export class ServiceProvider implements IServiceProvider {
                         const tree: ITreeItem = {
                             key: f.ServerRelativeUrl,
                             label: f.Name,
-                            data: f.ServerRelativeUrl
+                            data: f.ServerRelativeUrl,
+                            iconProps: { iconName: 'FabricFolderFill', style: { color: '#EDD200',},}
                         };
-                        //console.log('부모트리에 child로 push함(하위X): ' + tree.label );
                         resolve(tree);
                     }
                 });

@@ -4,7 +4,8 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      //"pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/NeoBizTeam/Shared%20Documents/Forms/AllItems.aspx",
       "customActions": {
         "9caae6c2-b1fb-46f0-a925-5e0850e9b01e": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
@@ -16,7 +17,8 @@
       }
     },
     "folderTreeExplorer": {
-      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      //"pageUrl": "https://neoplusdevonline.sharepoint.com/sites/EK_SPFxT/DocLibraryT/Forms/AllItems.aspx",
+      "pageUrl": "https://neoplusdevonline.sharepoint.com/sites/NeoBizTeam/Shared%20Documents/Forms/AllItems.aspx",
       "customActions": {
         "9caae6c2-b1fb-46f0-a925-5e0850e9b01e": {
           "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
